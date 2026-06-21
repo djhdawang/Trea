@@ -1,0 +1,44 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+*.classpath
+*.project
+*.settings/
+
+# Frontend
+node_modules/
+dist/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Upload files
+uploads/
+*.mp4
+*.avi
+*.mov
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+*.tgz

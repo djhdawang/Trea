@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blog.mapper.TagMapper">
+
+    <select id="selectEnabledList" resultType="com.blog.entity.Tag">
+        SELECT * FROM blog_tag WHERE deleted = 0 ORDER BY id ASC
+    </select>
+
+    <select id="selectTagListWithCount" resultType="com.blog.entity.Tag">
+        SELECT t.*, COUNT(at.article_id) as article_count 
+        FROM blog_tag t 
+        LEFT JOIN blog_article_tag at ON t.id = at.tag_id
+        WHERE t.deleted = 0
+        GROUP BY t.id
+        ORDER BY t.id ASC
+    </select>
+
+</mapper>

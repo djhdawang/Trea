@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blog.mapper.CarouselMapper">
+
+    <select id="selectEnabledList" resultType="com.blog.entity.Carousel">
+        SELECT * FROM blog_carousel WHERE status = 1 AND deleted = 0 ORDER BY sort ASC, id ASC
+    </select>
+
+</mapper>
